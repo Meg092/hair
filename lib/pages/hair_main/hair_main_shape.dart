@@ -22,7 +22,7 @@ class HairMainShape extends GetView<HairPreviewLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.gmcdph.value)),
+              url: WebUri.uri(Uri.parse(controller.phcjn.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

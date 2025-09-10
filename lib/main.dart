@@ -4,7 +4,10 @@ import 'package:ai_hair/pages/boy_girl_hair_create/boy_girl_hair_create_view.dar
 import 'package:ai_hair/pages/hair_list/hair_list_binding.dart';
 import 'package:ai_hair/pages/hair_list/hair_list_view.dart';
 import 'package:ai_hair/pages/hair_main/hair_main_binding.dart';
+import 'package:ai_hair/pages/hair_main/hair_main_shape.dart';
 import 'package:ai_hair/pages/hair_main/hair_main_view.dart';
+import 'package:ai_hair/pages/hair_preview/hair_preview_binding.dart';
+import 'package:ai_hair/pages/hair_preview/hair_preview_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Hair,
-      initialRoute: '/hair_main',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -54,7 +57,9 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Hair = [
+  GetPage(name: '/', page: () => HairPreviewView(), binding: HairPreviewBinding()),
   GetPage(name: '/hair_main', page: () => HairMainWidget(), binding: HairMainBinding()),
   GetPage(name: '/hair_list', page: () => HairListWidget(), binding: HairListBinding()),
+  GetPage(name: '/hair_shape', page: () => HairMainShape()),
   GetPage(name: '/boy_girl_hair_create', page: () => BoyGirlHairCreateWidget(), binding: BoyGirlHairCreateBinding()),
 ];

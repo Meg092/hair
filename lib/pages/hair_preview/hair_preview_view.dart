@@ -10,8 +10,8 @@ class HairPreviewView extends GetView<HairPreviewLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.huels.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.brakus.value
+              ? const CircularProgressIndicator(color: Colors.orange)
               : buildError(),
         ),
       ),
@@ -25,7 +25,7 @@ class HairPreviewView extends GetView<HairPreviewLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.jrvsn();
+              controller.dsiw();
             },
             icon: const Icon(
               Icons.restart_alt,
